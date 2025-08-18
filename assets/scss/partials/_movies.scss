@@ -1,0 +1,410 @@
+.container {
+    position: relative;
+
+
+    .movie-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        background: linear-gradient(#F4F6FA, #E6ECF4);
+        padding: 1rem;
+        gap: 2rem;
+        color: #1B2735;
+
+        &.dark {
+            background: linear-gradient(#1B2735, #4A90E2);
+            color: #FFFFFF;
+        }
+
+        .movie-banner {
+            display: flex;
+            padding: 0;
+
+
+            .banner {
+                display: none;
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 20px;
+
+
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    animation: fadeIn 1s ease-in-out;
+
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    object-position: center;
+                    flex-shrink: 0;
+                    border-radius: inherit;
+                }
+
+                &::before {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 50%;
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+                    pointer-events: none;
+                    z-index: 1;
+                }
+
+                h1 {
+                    color: #1B2735;
+                    text-wrap: pretty;
+                    width: 100%;
+                    text-align: center;
+
+                    &.dark {
+                        color: #FFFFFF;
+                    }
+
+                }
+            }
+        }
+
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            font-family: "Inter", sans-serif;
+            color: #1B2735;
+
+            &.dark {
+                color: #FFFFFF;
+            }
+
+
+            .trending {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                .slider {
+                    display: flex;
+
+                    .prev,
+                    .next {
+                        display: none;
+                        font-size: 3rem;
+                        padding-top: 125px;
+                        color: #1B2735;
+                        transition: all .5s linear;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .trending-movie {
+                        display: flex;
+                        gap: 50px;
+                        overflow: scroll;
+                        scroll-snap-type: x mandatory;
+                        scroll-behavior: smooth;
+                        padding: 1rem;
+
+
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            gap: .8rem;
+                            position: relative;
+                            transition: all 0.5s ease;
+
+
+                            img {
+                                border-radius: 20px;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            p {
+                                font-size: 1rem;
+                                font-weight: 700;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            &:hover>img {
+                                transform: scale(1.05);
+                                cursor: pointer;
+                            }
+
+                            &:hover>p {
+                                cursor: pointer;
+                                transform: scale(1.05);
+
+                            }
+
+                        }
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .now-playing {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                .slider {
+                    display: flex;
+
+                    .prev,
+                    .next {
+                        display: none;
+                        font-size: 3rem;
+                        padding-top: 125px;
+                        color: #1B2735;
+                        transition: all .5s linear;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .now-playing-movie {
+                        display: flex;
+                        gap: 50px;
+                        overflow: scroll;
+                        scroll-snap-type: x mandatory;
+                        scroll-behavior: smooth;
+                        padding: 1rem;
+
+
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            gap: .8rem;
+                            position: relative;
+                            transition: all 0.5s ease;
+
+
+                            img {
+                                border-radius: 20px;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            p {
+                                font-size: 1rem;
+                                font-weight: 700;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            &:hover>img {
+                                transform: scale(1.05);
+                                cursor: pointer;
+                            }
+
+                            &:hover>p {
+                                cursor: pointer;
+                                transform: scale(1.05);
+
+
+                            }
+
+                        }
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .top-rated {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                .slider {
+                    display: flex;
+
+                    .prev,
+                    .next {
+                        display: none;
+                        font-size: 3rem;
+                        padding-top: 125px;
+                        color: #1B2735;
+                        transition: all .5s linear;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .top-rated-movie {
+                        display: flex;
+                        gap: 50px;
+                        overflow: scroll;
+                        scroll-snap-type: x mandatory;
+                        scroll-behavior: smooth;
+                        padding: 1rem;
+
+
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            gap: .8rem;
+                            position: relative;
+                            transition: all 0.5s ease;
+
+
+                            img {
+                                border-radius: 20px;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            p {
+                                font-size: 1rem;
+                                font-weight: 700;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            &:hover>img {
+                                transform: scale(1.05);
+                                cursor: pointer;
+                            }
+
+                            &:hover>p {
+                                cursor: pointer;
+                                transform: scale(1.05);
+
+                            }
+
+                        }
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .upcoming-releases {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                .slider {
+                    display: flex;
+
+                    .prev,
+                    .next {
+                        display: none;
+                        font-size: 3rem;
+                        padding-top: 125px;
+                        color: #1B2735;
+                        transition: all .5s linear;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .upcoming-releases-movie {
+                        display: flex;
+                        gap: 50px;
+                        overflow: scroll;
+                        scroll-snap-type: x mandatory;
+                        scroll-behavior: smooth;
+                        padding: 1rem;
+
+
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            gap: .8rem;
+                            position: relative;
+                            transition: all 0.5s ease;
+
+
+                            img {
+                                border-radius: 20px;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            p {
+                                font-size: 1rem;
+                                font-weight: 700;
+                                transition: all 0.5s ease;
+
+                            }
+
+                            &:hover>img {
+                                transform: scale(1.05);
+                                cursor: pointer;
+                            }
+
+                            &:hover>p {
+                                cursor: pointer;
+                                transform: scale(1.05);
+
+                            }
+
+                        }
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .theme-toggle {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
