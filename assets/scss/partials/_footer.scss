@@ -1,0 +1,53 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B2735;
+    padding: 1rem;
+    gap: 25px;
+
+    .logo {
+        display: flex;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    nav {
+        display: flex;
+
+        menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            li {
+                list-style: none;
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    font-size: 24px;
+                    font-family: "Inter", sans-serif;
+                    color: #FFFFFF;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                        text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 55px #FFD700, 0 0 75px #FFD700;
+
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        color: #FFFFFF;
+    }
+}

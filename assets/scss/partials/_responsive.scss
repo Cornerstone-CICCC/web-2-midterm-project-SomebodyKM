@@ -1,0 +1,256 @@
+@media screen and (min-width: 768px) {
+    .container {
+        header {
+            position: relative;
+
+            .desktop-header {
+                padding: 1rem;
+                position: fixed;
+                top: 0;
+                width: 100vw;
+                background-color: #1B2735;
+                display: flex;
+                justify-content: center;
+
+                .logo {
+
+                    position: absolute;
+                    top: 30px;
+                    left: 20px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+
+                nav {
+                    display: flex;
+
+                    menu {
+                        display: flex;
+                        align-items: center;
+                        background-color: #FFFFFF;
+                        padding: 1rem 2rem;
+                        gap: 20px;
+                        border-radius: 50px;
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                text-decoration: none;
+                                color: #1B2735;
+                                font-size: 24px;
+                                font-family: "Inter", sans-serif;
+                                font-weight: 700;
+                                transition: all .3s ease;
+
+                                &:hover {
+                                    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+                                    cursor: pointer;
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .search-section {
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    border-radius: 50px;
+                    background: #ffffff;
+                    width: 50px;
+                    overflow: hidden;
+                    transition: all 0.5s ease;
+
+                    &.active {
+                        width: 290px;
+                        padding: 0 6px;
+                        box-shadow: 0px 0px 20px 2px #1B2735;
+                        cursor: pointer;
+                    }
+
+
+                    .search-input {
+                        border: none;
+                        background: none;
+                        outline: none;
+                        color: #1B2735;
+                        font-size: 1rem;
+                        width: 0;
+                        padding: 0;
+                        transition: width 0.5s ease, padding 0.5s ease;
+                    }
+
+
+                    &.active .search-input {
+                        width: 240px;
+                        padding: 0 10px;
+                    }
+
+                    .search-btn {
+                        flex-shrink: 0;
+                        width: 50px;
+                        height: 50px;
+                        background: #ffffff;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #1B2735;
+                        text-decoration: none;
+                        transition: background 0.3s ease;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            .mobile-header {
+                display: none;
+            }
+        }
+
+        .movie-section {
+            padding: 70px;
+
+            .movie-banner {
+                .banner {
+                    max-height: 500px;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    &::before {
+                        display: block;
+                    }
+
+                    h1 {
+                        position: absolute;
+                        text-align: start;
+                        top: 10px;
+                        left: 15px;
+                        color: #FFFFFF;
+                        font-size: 48px;
+                        z-index: 2;
+                    }
+                }
+            }
+
+            .section-container {
+
+                .trending,
+                .now-playing,
+                .top-rated,
+                .upcoming-releases {
+                    .slider {
+
+                        .prev,
+                        .next {
+                            display: block;
+
+                            &.dark {
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .series-section {
+            padding: 70px;
+
+            .series-banner {
+                .banner {
+                    max-height: 500px;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    &::before {
+                        display: block;
+                    }
+
+                    h1 {
+                        position: absolute;
+                        text-align: start;
+                        top: 10px;
+                        left: 15px;
+                        color: #FFFFFF;
+                        font-size: 48px;
+                        z-index: 2;
+                    }
+                }
+            }
+
+            .section-container {
+
+                .trending,
+                .now-playing,
+                .top-rated,
+                .upcoming-releases {
+                    .slider {
+
+                        .prev,
+                        .next {
+                            display: block;
+
+                            &.dark {
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-section {
+            padding: 5rem;
+
+            .about-info {
+                margin-top: 5rem;
+                padding: 2rem;
+            }
+        }
+
+        .theme-toggle {
+            display: flex;
+            width: 50px;
+            height: 50px;
+            background-color: #1B2735;
+            color: #FFFFFF;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 75%;
+            right: 5px;
+
+            &:hover {
+                text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 55px #FFD700, 0 0 75px #FFD700;
+                transform: scale(1.05);
+                cursor: pointer;
+
+            }
+        }
+
+        footer {
+            nav {
+                menu {
+                    flex-direction: row;
+                    gap: 60px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}
